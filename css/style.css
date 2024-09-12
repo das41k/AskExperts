@@ -1,0 +1,228 @@
+.header {
+  padding: 40px 0;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.header__nav {
+}
+.header__list {
+  display: flex;
+  gap: 30px;
+}
+.header__item {
+  font-size: 17.73px;
+  line-height: 160%;
+  color: rgb(38, 38, 38);
+}
+.header__button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 41px 8px 10px;
+  background-color: rgb(243, 243, 243);
+  max-width: none;
+}
+.header__button-link {
+  color: rgb(53, 53, 53);
+}
+.burger {
+  --burger-width: 28px;
+  --burger-height: 22px;
+  --burger-line-height: 3px;
+  position: relative;
+  display: none;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--neutral-color-140);
+  background-color: transparent;
+}
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentcolor;
+}
+
+.burger::before {
+  top: 0;
+  transition: transform 0.2s, top 0.2s 0.2s;
+  transition-duration: 0.2s;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+  transition: transform 0.2s, top 0.2s 0.2s;
+  transition-duration: 0.2s;
+}
+
+.burger-line {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateX(-25%);
+  width: 50%;
+  height: var(--burger-line-height);
+  background-color: currentcolor;
+  transform: translateY(-50%);
+  transition: transform;
+  transition-duration: 0.2s;
+  transition-delay: 0.2s;
+  transition: all var(--transition);
+}
+.fdf {
+  height: 1700px;
+}
+.burger::before,
+.burger::after,
+.burger-line {
+  border-radius: 28px;
+}
+.burger--active::before {
+  top: 50%;
+  transform: rotateZ(-45deg);
+  transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotateZ(45deg);
+  transition: top 0.35s, transform 0.2s 0.2s;
+}
+
+.burger--active .burger-line {
+  opacity: 0;
+  visibility: hidden;
+}
+/* ========================================= */
+.hero {
+  padding: 195px 0 207px;
+  background: url('../assets/img/home-baner.png');
+}
+.hero__container {
+  max-width: 1593px;
+}
+.hero__banner {
+  padding: 55px 58px;
+  max-width: 552px;
+  backdrop-filter: blur(11px);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 29px;
+}
+.hero__title {
+  margin-bottom: 19px;
+}
+.hero__descr {
+  color: var(--main-text);
+  line-height: 147.5%;
+  margin-bottom: 18px;
+}
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.hero__button-meeting {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--secondary-02);
+  color: rgb(53, 53, 53);
+  padding: 8px 10px;
+}
+/* ======================================= */
+.clients {
+  margin-top: 30px;
+}
+.clients__container {
+  max-width: 1834px;
+}
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.clients__item {
+  opacity: 0.8;
+}
+/* ================= */
+@media (max-width: 992px) {
+  .header__right {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 1;
+    flex-direction: column;
+    width: 80dvw;
+    height: 100%;
+    background-color: var(--secondary-02);;
+    opacity: 0;
+    visibility: hidden;
+    transition: left var(--transition), opacity var(--transition),
+    visibility var(--transition);
+  }
+  .header__list {
+    flex-direction: column;
+    margin-top: 200px;
+  }
+  .header__right--visible {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    padding-left: 40px;
+  }
+  .burger {
+    display: block;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #0000002d;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -2;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+  .overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  .header__logo--visible {
+    position: fixed;
+    top: 55px;
+    z-index: 2;
+    left: 60px;
+  }
+  .burger--active {
+    position: fixed;
+    right: 20px;
+    top: 7%;
+    z-index: 3;
+  } 
+}
+
+@media (max-width: 380px) {
+  .header__right {
+    padding-left: 10px;
+  }
+  .header__button {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}

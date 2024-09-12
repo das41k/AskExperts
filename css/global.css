@@ -1,0 +1,168 @@
+:root {
+  --primary-01:#ffcc4a;
+  --primary-02: #4eaf4e;
+  --primary-03:  #181818;
+  --secondary-01:#f5f5f5;
+  --secondary-02: #ffffff;
+  /* ===== */
+  --border-radius: 42px;
+  --transition: .4s;
+  /* ===== */
+  --main-text: #595566;
+  --text-title: rgb(28, 28, 28);
+}
+/* =========== */
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  scroll-behavior: smooth !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body {
+  overflow-x: hidden;
+  color: var(--main-text);
+  background-color: var(--secondary-02);
+  position: relative;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+.container {
+  padding: 0 15px;
+  max-width: 1230px;
+  margin: 0 auto;
+  height: 100%;
+}
+/* ============================== vars */
+.heading-h1 {
+  color: rgb(28, 28, 28);
+  font-family: Cabin;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.heading-h1 {
+  color: var(--text-title);
+  font-family: Cabin;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.heading-h2 {
+  color: var(--text-title);
+  font-family: Cabin;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.heading-h3 {
+  color: var(--text-title);
+  font-family: Cabin;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.heading-h4 {
+  color: var(--text-title);
+  font-family: Cabin;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.heading-h5 {
+  font-family: Cabin;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.heading-h6 {
+  color: var(--text-title);
+  font-family: Cabin;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.button {
+  padding: 16px 33px;
+  border-radius: 42px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: var(--border-radius);
+}
+.button--first {
+  background: var(--primary-03);
+  border: 2px solid var(--primary-03);
+  color: var(--secondary-02);
+  transition: all var(--transition);
+}
+.button--first:hover {
+  color: var(--primary-03);
+  background-color:var(--secondary-02);
+}
+.button--second {
+  background: rgb(255, 204, 74);
+  color: var(--primary-03);
+  transition: all var(--transition);
+}
+.button--second:hover {
+  background: var(--primary-03);
+  color:var(--secondary-02);
+}
