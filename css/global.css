@@ -9,7 +9,7 @@
   --transition: .4s;
   /* ===== */
   --main-text: #595566;
-  --text-title: rgb(28, 28, 28);
+  --text-title: #1c1c1c;
 }
 /* =========== */
 html {
@@ -103,7 +103,6 @@ label {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
 }
 .heading-h3 {
   color: var(--text-title);
@@ -112,7 +111,6 @@ label {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
 }
 .heading-h4 {
   color: var(--text-title);
@@ -121,7 +119,6 @@ label {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
 }
 .heading-h5 {
   font-family: Cabin;
@@ -129,7 +126,6 @@ label {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
 }
 .heading-h6 {
   color: var(--text-title);
@@ -138,7 +134,12 @@ label {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
+}
+.text-p-default {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 147.5%;
+  color: var(--main-text);
 }
 .button {
   padding: 16px 33px;
@@ -165,4 +166,83 @@ label {
 .button--second:hover {
   background: var(--primary-03);
   color:var(--secondary-02);
+}
+@media (max-width: 992px) {
+  .heading-h1 {
+    font-size: 46px;
+  }
+  .heading-h2 {
+    font-size: 40px;
+  }
+  .heading-h3 {
+
+  }
+  .heading-h4 {
+
+  }
+  .heading-h5 {
+
+  }
+  .heading-h6 {
+
+  }
+}
+@media (max-width: 768px) {
+  .heading-h1 {
+    font-size: 40px;
+  }
+  .heading-h2 {
+    font-size: 36px;
+  }
+  .heading-h3 {
+
+  }
+  .heading-h4 {
+
+  }
+  .heading-h5 {
+
+  }
+  .heading-h6 {
+
+  }
+}
+@media (max-width: 567px) {
+  .heading-h1 {
+    font-size: 38px;
+  }
+  .heading-h2 {
+    font-size: 32px;
+  }
+  .heading-h3 {
+
+  }
+  .heading-h4 {
+
+  }
+  .heading-h5 {
+
+  }
+  .heading-h6 {
+
+  }
+}
+@media (max-width: 480px) {
+  .heading-h1 {
+    font-size: 32px;
+  }
+  .heading-h2 {
+    font-size: 30px;
+  }
+  .heading-h4 {
+
+  }
+  .heading-h5 {
+
+  }
+  .heading-h6 {
+  }
+  .text-p-default {
+    font-size: 14px;
+  }
 }
